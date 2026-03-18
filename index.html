@@ -6,11 +6,9 @@
 
 <title>Industrial Tools Supplier in Pune | Veda Tools & Engineers</title>
 
-<meta name="description" content="Veda Tools & Engineers - Industrial Tools Supplier in Bhosari Pune. Endmills, drills, collets, carbide tools. Trusted since 2009.">
+<meta name="description" content="Veda Tools & Engineers - Trusted industrial tools supplier in Bhosari Pune since 2009. Endmills, drills, collets, carbide tools & more.">
 
 <style>
-
-/* (ALL YOUR OLD CSS SAME — NO CHANGE) */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI';}
 html{scroll-behavior:smooth;background:#0b0b0b;color:white}
 
@@ -29,18 +27,17 @@ nav ul li a{color:white;text-decoration:none}
 .hero{
 height:100vh;
 background:radial-gradient(circle,#1c1c1c,#000);
-position:relative;overflow:hidden;
 display:flex;align-items:center;padding:0 10%;
+position:relative;overflow:hidden;
 }
 
 .hero::before{
 content:"";
 position:absolute;
-width:800px;height:800px;
-border:1px solid rgba(255,255,255,0.05);
+width:700px;height:700px;
+border:1px solid rgba(0,170,255,0.2);
 border-radius:50%;
-top:20%;left:30%;
-animation:spin 25s linear infinite;
+animation:spin 20s linear infinite;
 }
 
 @keyframes spin{
@@ -51,7 +48,6 @@ to{transform:rotate(360deg)}
 .hero h1{font-size:60px}
 .tagline{color:#00aaff;margin-top:10px}
 
-/* BUTTON */
 .btn{
 display:inline-block;margin-top:20px;
 padding:12px 30px;
@@ -62,61 +58,89 @@ border-radius:30px;color:white;text-decoration:none;
 /* SECTION */
 section{padding:100px 10%}
 
-/* SCROLL */
+/* SCROLL ANIMATION */
 .fade{opacity:0;transform:translateY(40px);transition:1s}
 .fade.show{opacity:1;transform:translateY(0)}
 
 /* SLIDER */
-.slider{overflow:hidden;margin-top:30px}
-.track{display:flex;width:max-content;animation:scroll 20s linear infinite;}
+.slider{overflow:hidden;margin-top:40px}
+.track{display:flex;width:max-content;animation:scroll 25s linear infinite;}
 .slide{width:250px;margin-right:20px;}
-.slide img{width:100%;height:180px;object-fit:cover;border-radius:10px;}
+.slide img{width:100%;height:180px;object-fit:cover;border-radius:12px;}
 
 @keyframes scroll{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
 }
 
-/* PRODUCTS */
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:#111;padding:20px;border-radius:15px;text-align:center;transition:0.3s;}
-.card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,170,255,0.3);}
-.card img{width:100%;height:200px;object-fit:cover;border-radius:10px;}
+/* PRODUCTS GRID */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:40px;
+}
+.card{
+background:#111;padding:20px;border-radius:15px;text-align:center;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,170,255,0.3);
+}
+.card img{
+width:100%;height:200px;object-fit:cover;border-radius:10px;
+}
 
 /* STATS */
-.stats{display:flex;gap:20px;margin-top:30px}
-.stat{background:#111;padding:20px;border-radius:15px}
-.stat h3{color:#00aaff;font-size:35px}
+.stats{
+display:flex;gap:20px;margin-top:40px;flex-wrap:wrap;
+}
+.stat{
+background:#111;padding:25px;border-radius:15px;flex:1;
+text-align:center;
+}
+.stat h3{font-size:40px;color:#00aaff}
 
-/* TRUST */
+/* TRUST BOX */
 .trust{
+margin-top:40px;
 background:linear-gradient(135deg,rgba(0,170,255,0.1),rgba(255,255,255,0.05));
 padding:40px;border-radius:20px;
+line-height:1.6;
 }
 
 /* OWNER */
-.owner{text-align:center;margin-top:30px}
 .owner-big{
-text-align:center;padding:50px;
+margin-top:40px;
+text-align:center;
+padding:50px;
+border:1px solid rgba(0,170,255,0.4);
 border-radius:20px;
-border:1px solid rgba(0,170,255,0.3);
 }
-.owner-big h1{font-size:50px;color:#00aaff}
+.owner-big h1{
+font-size:50px;
+color:#00aaff;
+}
 
 /* CTA */
-.cta-section{padding:80px 10%;background:linear-gradient(135deg,#0d3a4a,#1a1a1a);}
-.cta-container{display:flex;align-items:center;gap:50px;flex-wrap:wrap;}
-.cta-image img{width:350px;height:350px;object-fit:cover;border-radius:20px;}
+.cta-section{
+padding:80px 10%;
+background:linear-gradient(135deg,#0d3a4a,#1a1a1a);
+}
+.cta-container{
+display:flex;gap:50px;flex-wrap:wrap;align-items:center;
+}
+.cta-image img{
+width:350px;height:350px;object-fit:cover;border-radius:20px;
+}
 .cta-content{max-width:600px}
-.small-text{color:#aaa;margin-bottom:10px}
-.cta-content h2{font-size:40px;margin-bottom:20px;}
-.desc{color:#ccc;line-height:1.6;margin-bottom:25px;}
 .cta-btn{
 display:inline-block;padding:14px 30px;
-background:#ff0033;color:white;border-radius:10px;text-decoration:none;
+background:#25D366;color:white;border-radius:10px;text-decoration:none;
 }
 
-/* FORM */
+/* CONTACT */
 form input,form textarea{
 width:100%;padding:12px;margin-top:10px;
 background:#111;border:none;color:white;border-radius:8px;
@@ -126,7 +150,7 @@ margin-top:15px;padding:12px 25px;
 background:#00aaff;border:none;border-radius:20px;color:white;
 }
 
-/* WHATSAPP FLOAT */
+/* FLOAT WHATSAPP */
 .whatsapp{
 position:fixed;bottom:20px;right:20px;
 background:#25D366;padding:15px 20px;
@@ -134,12 +158,12 @@ border-radius:50px;color:white;text-decoration:none;
 }
 
 footer{text-align:center;padding:20px;background:black}
-
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
 <h2>VedaTools</h2>
 <ul>
@@ -158,27 +182,24 @@ footer{text-align:center;padding:20px;background:black}
 
 <a href="#contact" class="btn">Get Quote</a>
 
-<!-- ✅ HERO WHATSAPP -->
-<a href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20your%20industrial%20tools" 
-class="btn" target="_blank" 
-style="background:#25D366;margin-left:10px;">
+<a href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20industrial%20tools" 
+class="btn" target="_blank" style="background:#25D366;margin-left:10px;">
 WhatsApp Now
 </a>
-
 </div>
 </section>
 
 <!-- SLIDER -->
 <section>
-<h2 class="fade">Our Products</h2>
+<h2 class="fade">Our Product Range</h2>
 <div class="slider">
 <div class="track">
-<div class="slide"><img src="drill.jpg"></div>
-<div class="slide"><img src="carbide.jpg"></div>
-<div class="slide"><img src="allenkey.jpg"></div>
-<div class="slide"><img src="drill.jpg"></div>
-<div class="slide"><img src="carbide.jpg"></div>
-<div class="slide"><img src="allenkey.jpg"></div>
+<div class="slide"><img src="image1.jpg"></div>
+<div class="slide"><img src="image2.jpg"></div>
+<div class="slide"><img src="image3.jpg"></div>
+<div class="slide"><img src="image1.jpg"></div>
+<div class="slide"><img src="image2.jpg"></div>
+<div class="slide"><img src="image3.jpg"></div>
 </div>
 </div>
 </section>
@@ -186,7 +207,42 @@ WhatsApp Now
 <!-- ABOUT -->
 <section id="about">
 <h2 class="fade">About Company</h2>
-<p class="fade">Veda Tools & Engineers... (same as before)</p>
+
+<p class="fade">
+Veda Tools & Engineers is a leading supplier of industrial tools based in Bhosari, Pune. 
+We specialize in high-quality MS tools, endmills, drills, collets, screws, inserts, cutter bodies, edge finders, and allen keys.
+</p>
+
+<div class="stats fade">
+<div class="stat"><h3>400+</h3><p>Clients</p></div>
+<div class="stat"><h3>2000+</h3><p>Products</p></div>
+<div class="stat"><h3>17+</h3><p>Years Experience</p></div>
+</div>
+
+<div class="trust fade">
+We believe in long-term business relationships, consistent quality, and fast supply. 
+Trusted by factories, vendors, and wholesalers across Pune.
+</div>
+
+<div class="owner-big fade">
+<h1>Deepak Sonje</h1>
+<p>Founder & Owner</p>
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<h2 class="fade">Products</h2>
+
+<div class="products">
+<div class="card"><img src="image1.jpg"><h3>Drills</h3></div>
+<div class="card"><img src="image2.jpg"><h3>Endmills</h3></div>
+<div class="card"><img src="image3.jpg"><h3>Carbide Inserts</h3></div>
+<div class="card"><img src="image1.jpg"><h3>Collets</h3></div>
+<div class="card"><img src="image2.jpg"><h3>Allen Keys</h3></div>
+<div class="card"><img src="image3.jpg"><h3>Cutter Body</h3></div>
+</div>
 </section>
 
 <!-- CTA -->
@@ -194,17 +250,14 @@ WhatsApp Now
 <div class="cta-container">
 
 <div class="cta-image">
-<img src="drill.jpg">
+<img src="image1.jpg">
 </div>
 
 <div class="cta-content">
-<p class="small-text">Have Questions?</p>
-<h2>Discuss your industrial requirements with us</h2>
+<h2>Discuss your industrial requirements</h2>
+<p>We help businesses choose the right tools with reliability.</p>
 
-<p class="desc">Facing challenges in sourcing tools? We help 400+ clients.</p>
-
-<!-- ✅ CTA WHATSAPP -->
-<a href="https://wa.me/919158802623?text=Hello%20I%20want%20to%20discuss%20industrial%20requirements" 
+<a href="https://wa.me/919158802623?text=Hello%20I%20want%20to%20discuss%20requirements" 
 class="cta-btn" target="_blank">
 Chat on WhatsApp
 </a>
@@ -215,18 +268,42 @@ Chat on WhatsApp
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
+<h2>Contact Us</h2>
 <p>📞 9158802623</p>
+<p>📧 vedatools@rediffmail.com</p>
+<p>📍 Bhosari, Pune</p>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button>Send Inquiry</button>
+</form>
 </section>
 
-<footer>© 2026 Veda Tools & Engineers</footer>
+<footer>
+© 2026 Veda Tools & Engineers | Built for Growth 🚀
+</footer>
 
-<!-- ✅ FLOATING WHATSAPP -->
+<!-- FLOAT WHATSAPP -->
 <a class="whatsapp" 
-href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20your%20industrial%20tools" 
+href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20industrial%20tools" 
 target="_blank">
 Chat on WhatsApp
 </a>
+
+<!-- SCROLL JS -->
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
