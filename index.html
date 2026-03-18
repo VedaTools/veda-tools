@@ -9,12 +9,12 @@
 
 /* RESET */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI';}
-html{scroll-behavior:smooth;background:#0e0e0e;color:white}
+html{scroll-behavior:smooth;background:#0b0b0b;color:white}
 
 /* NAV */
 nav{
 position:fixed;width:100%;padding:15px 50px;
-background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);
 display:flex;justify-content:space-between;z-index:1000;
 }
 nav h2{color:#00aaff}
@@ -25,24 +25,29 @@ nav ul li a{color:white;text-decoration:none}
 /* HERO */
 .hero{
 height:100vh;position:relative;
-background:radial-gradient(circle,#2a2a2a,#0e0e0e);
+background:radial-gradient(circle,#1c1c1c,#000);
 overflow:hidden;
 }
 
-.hero::before,.hero::after{
-content:"";position:absolute;border-radius:50%;
+.hero::before{
+content:"";
+position:absolute;
+width:800px;height:800px;
 border:1px solid rgba(255,255,255,0.05);
+border-radius:50%;
+top:20%;left:30%;
+animation:spin 25s linear infinite;
 }
-.hero::before{width:700px;height:700px;top:20%;left:30%;animation:rotate 20s linear infinite;}
-.hero::after{width:1000px;height:1000px;top:10%;left:20%;animation:rotateReverse 25s linear infinite;}
 
-@keyframes rotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-@keyframes rotateReverse{from{transform:rotate(360deg)}to{transform:rotate(0)}}
+@keyframes spin{
+from{transform:rotate(0)}
+to{transform:rotate(360deg)}
+}
 
 .hero-content{
 position:absolute;top:35%;left:10%;
 }
-.hero h1{font-size:60px}
+.hero h1{font-size:65px}
 .tagline{color:#00aaff;margin-top:10px}
 
 /* BUTTON */
@@ -56,48 +61,8 @@ border-radius:30px;color:white;text-decoration:none;
 /* SECTION */
 section{padding:100px 10%}
 
-/* FADE */
-.fade-up{opacity:0;transform:translateY(50px);transition:1s}
-.fade-up.show{opacity:1;transform:translateY(0)}
-
-/* STATS */
-.stats{display:flex;gap:20px;margin-top:30px}
-.stat{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px}
-.stat h3{color:#00aaff;font-size:35px}
-
-/* OWNER */
-.owner{text-align:center;margin-top:30px;border:1px solid #00aaff;padding:20px;border-radius:10px}
-
-.owner-big{
-text-align:center;margin-top:50px;padding:50px;
-border-radius:20px;
-background:linear-gradient(135deg, rgba(0,170,255,0.1), rgba(255,255,255,0.05));
-border:1px solid rgba(0,170,255,0.3);
-}
-.owner-big h1{font-size:50px;color:#00aaff}
-
-/* TRUST */
-.trust-box{
-max-width:900px;margin:auto;padding:40px;
-background:rgba(255,255,255,0.05);
-border-radius:20px;
-}
-
-/* PRODUCTS */
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.card{
-background:rgba(255,255,255,0.05);
-padding:15px;border-radius:15px;text-align:center;
-}
-.card img{width:100%;height:200px;object-fit:cover;border-radius:10px}
-
-/* 🔥 SLIDER */
-.slider-section{text-align:center}
-.slider{overflow:hidden;border-radius:20px;margin-top:30px}
+/* SLIDER */
+.slider{overflow:hidden;border-radius:20px}
 .slides{display:flex;width:300%;animation:slide 12s infinite}
 .slides img{width:100%;height:400px;object-fit:cover}
 
@@ -108,6 +73,55 @@ padding:15px;border-radius:15px;text-align:center;
 65%{transform:translateX(-100%)}
 70%{transform:translateX(-200%)}
 100%{transform:translateX(-200%)}
+}
+
+/* CARDS */
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;border-radius:15px;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,170,255,0.3);
+}
+
+/* GRID */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* STATS */
+.stats{display:flex;gap:20px;margin-top:30px}
+.stat{background:rgba(255,255,255,0.05);padding:20px;border-radius:15px}
+.stat h3{color:#00aaff;font-size:35px}
+
+/* TRUST */
+.trust{
+background:linear-gradient(135deg,rgba(0,170,255,0.1),rgba(255,255,255,0.05));
+padding:50px;border-radius:20px;
+}
+
+/* OWNER */
+.owner-big{
+text-align:center;padding:50px;
+border:1px solid rgba(0,170,255,0.3);
+border-radius:20px;
+}
+.owner-big h1{font-size:50px;color:#00aaff}
+
+/* FORM */
+form input, form textarea{
+width:100%;padding:12px;margin-top:10px;
+background:#111;border:none;color:white;border-radius:8px;
+}
+form button{
+margin-top:15px;
+padding:12px 25px;
+background:#00aaff;border:none;color:white;border-radius:20px;
+cursor:pointer;
 }
 
 /* WHATSAPP */
@@ -136,16 +150,16 @@ footer{text-align:center;padding:20px;background:black}
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<h1 class="fade-up">Veda Tools & Engineers</h1>
-<p class="fade-up">Since 2009 • Industrial Excellence</p>
-<div class="tagline fade-up">Built for Performance. Trusted for Quality.</div>
-<a href="#about" class="btn fade-up">Explore</a>
+<h1>Veda Tools & Engineers</h1>
+<p>Since 2009 • Industrial Excellence</p>
+<div class="tagline">Powering Precision Engineering</div>
+<a href="#contact" class="btn">Get Quote</a>
 </div>
 </section>
 
 <!-- SLIDER -->
-<section class="slider-section">
-<h2 class="fade-up">Our Products</h2>
+<section>
+<h2>Our Products</h2>
 <div class="slider">
 <div class="slides">
 <img src="drill.jpg">
@@ -157,37 +171,30 @@ footer{text-align:center;padding:20px;background:black}
 
 <!-- ABOUT -->
 <section id="about">
-<h2 class="fade-up">About Company</h2>
-<p class="fade-up">
+<h2>About Company</h2>
+<p>
 Veda Tools & Engineers is a leading supplier of industrial tools based in Bhosari, Pune.
-We provide MS tools, drills, collets, inserts and precision tools to industries.
+Since 2009, we have delivered high-performance tools to factories and industries with focus on reliability and long-term partnerships.
 </p>
 
 <div class="stats">
-<div class="stat fade-up"><h3 data-target="400">0</h3><p>Clients</p></div>
-<div class="stat fade-up"><h3 data-target="2000">0</h3><p>Products</p></div>
-<div class="stat fade-up"><h3 data-target="17">0</h3><p>Years</p></div>
-</div>
-
-<div class="owner fade-up">
-<h3>Owner</h3>
-<p><b>Deepak Sonje</b></p>
+<div class="stat"><h3>400+</h3><p>Clients</p></div>
+<div class="stat"><h3>2000+</h3><p>Products</p></div>
+<div class="stat"><h3>17+</h3><p>Years</p></div>
 </div>
 </section>
 
 <!-- TRUST -->
 <section>
-<div class="trust-box fade-up">
-<h2>Why Choose Us?</h2>
-<p>High-quality industrial tools with long-term reliability.</p>
-<p>Trusted by 400+ clients.</p>
-<p>Focused on strong business relationships.</p>
+<div class="trust">
+<h2>Why Choose Us</h2>
+<p>High-quality tools. Trusted by industries. Built for performance.</p>
 </div>
 </section>
 
-<!-- OWNER BIG -->
+<!-- OWNER -->
 <section>
-<div class="owner-big fade-up">
+<div class="owner-big">
 <h2>Leadership</h2>
 <h1>Deepak Sonje</h1>
 <p>Driving excellence since 2009</p>
@@ -196,68 +203,33 @@ We provide MS tools, drills, collets, inserts and precision tools to industries.
 
 <!-- PRODUCTS -->
 <section id="products">
-<h2 class="fade-up">Product Range</h2>
-
+<h2>Product Range</h2>
 <div class="products">
-<div class="card fade-up"><img src="drill.jpg"><h3>Drills</h3></div>
-<div class="card fade-up"><img src="carbide.jpg"><h3>Carbide Tools</h3></div>
-<div class="card fade-up"><img src="allenkey.jpg"><h3>Allen Key</h3></div>
-<div class="card fade-up"><h3>Inserts</h3></div>
-<div class="card fade-up"><h3>Cutter Body</h3></div>
+<div class="card"><img src="drill.jpg"><h3>Drills</h3></div>
+<div class="card"><img src="carbide.jpg"><h3>Carbide Tools</h3></div>
+<div class="card"><img src="allenkey.jpg"><h3>Allen Key</h3></div>
 </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT FORM -->
 <section id="contact">
-<h2 class="fade-up">Contact</h2>
-<p>📍 Bhosari MIDC, Pune</p>
-<p>📞 <a href="tel:9158802623" style="color:#00aaff;">9158802623</a></p>
-<p>📧 vedatools@rediffmail.com</p>
+<h2>Get Enquiry</h2>
+
+<form action="mailto:vedatools@rediffmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
+<textarea name="message" placeholder="Your Requirement"></textarea>
+<button type="submit">Send Enquiry</button>
+</form>
+
+<p style="margin-top:20px;">📞 9158802623</p>
 </section>
 
 <footer>© 2026 Veda Tools & Engineers</footer>
 
-<a class="whatsapp" href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank">
+<a class="whatsapp" href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20your%20products">
 WhatsApp
 </a>
-
-<script>
-
-/* SCROLL ANIMATION */
-const els=document.querySelectorAll('.fade-up');
-window.addEventListener('scroll',()=>{
-els.forEach(el=>{
-if(el.getBoundingClientRect().top<window.innerHeight-100){
-el.classList.add('show');
-}
-});
-});
-
-/* COUNTER */
-const counters=document.querySelectorAll('[data-target]');
-let started=false;
-
-window.addEventListener('scroll',()=>{
-if(!started){
-counters.forEach(c=>{
-let update=()=>{
-let target=+c.getAttribute('data-target');
-let count=+c.innerText;
-let inc=target/100;
-if(count<target){
-c.innerText=Math.ceil(count+inc);
-setTimeout(update,20);
-}else{
-c.innerText=target+"+";
-}
-};
-update();
-});
-started=true;
-}
-});
-
-</script>
 
 </body>
 </html>
