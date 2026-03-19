@@ -6,26 +6,48 @@
 
 <title>Industrial Tools Supplier in Pune | Veda Tools & Engineers</title>
 
-<meta name="description" content="Veda Tools & Engineers - Trusted industrial tools supplier in Bhosari Pune since 2009. Endmills, drills, collets, carbide tools & more.">
+<meta name="description" content="Veda Tools & Engineers - Leading industrial tools supplier in Bhosari Pune since 2009. Endmills, drills, collets, inserts and precision tools.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI';}
 html{scroll-behavior:smooth;background:#0b0b0b;color:white}
 
 /* NAV */
-nav{position:fixed;width:100%;padding:15px 50px;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);display:flex;justify-content:space-between;z-index:1000;}
+nav{
+position:fixed;width:100%;padding:15px 50px;
+background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;z-index:1000;
+}
 nav h2{color:#00aaff}
 nav ul{display:flex;list-style:none}
 nav ul li{margin-left:25px}
 nav ul li a{color:white;text-decoration:none}
 
 /* HERO */
-.hero{height:100vh;background:radial-gradient(circle,#1c1c1c,#000);display:flex;align-items:center;padding:0 10%;position:relative;overflow:hidden;}
-.hero::before{content:"";position:absolute;width:700px;height:700px;border:1px solid rgba(0,170,255,0.2);border-radius:50%;animation:spin 20s linear infinite;}
+.hero{
+height:100vh;
+background:radial-gradient(circle,#1c1c1c,#000);
+display:flex;align-items:center;padding:0 10%;
+position:relative;overflow:hidden;
+}
+.hero::before{
+content:"";
+position:absolute;
+width:700px;height:700px;
+border:1px solid rgba(0,170,255,0.2);
+border-radius:50%;
+animation:spin 20s linear infinite;
+}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 .hero h1{font-size:60px}
 .tagline{color:#00aaff;margin-top:10px}
-.btn{display:inline-block;margin-top:20px;padding:12px 30px;background:linear-gradient(45deg,#00aaff,#0077ff);border-radius:30px;color:white;text-decoration:none}
+
+.btn{
+display:inline-block;margin-top:20px;
+padding:12px 30px;
+background:linear-gradient(45deg,#00aaff,#0077ff);
+border-radius:30px;color:white;text-decoration:none;
+}
 
 /* SECTION */
 section{padding:100px 10%}
@@ -34,18 +56,49 @@ section{padding:100px 10%}
 .fade{opacity:0;transform:translateY(40px);transition:1s}
 .fade.show{opacity:1;transform:translateY(0)}
 
-/* SLIDER */
+/* 🔥 FIXED SLIDER */
 .slider{overflow:hidden;margin-top:40px}
-.track{display:flex;width:max-content;animation:scroll 25s linear infinite;}
-.slide{width:250px;margin-right:20px;}
-.slide img{width:100%;height:180px;object-fit:cover;border-radius:12px;}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.track{
+display:flex;width:max-content;
+animation:scroll 25s linear infinite;
+}
+.slide{
+width:260px;height:220px;
+margin-right:20px;
+display:flex;align-items:center;justify-content:center;
+background:#111;border-radius:12px;
+}
+.slide img{
+max-width:100%;
+max-height:100%;
+object-fit:contain;
+border-radius:10px;
+transition:0.4s;
+}
+.slide:hover img{transform:scale(1.1);}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
 
 /* GRID */
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px;}
-.card{background:#111;padding:20px;border-radius:15px;text-align:center;transition:0.3s;}
-.card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,170,255,0.3);}
-.card img{width:100%;height:200px;object-fit:cover;border-radius:10px;}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;margin-top:40px;
+}
+.card{
+background:#111;padding:20px;border-radius:15px;text-align:center;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,170,255,0.3);
+}
+.card img{
+width:100%;height:200px;object-fit:cover;border-radius:10px;
+}
 
 /* STATS */
 .stats{display:flex;gap:20px;margin-top:40px;flex-wrap:wrap;}
@@ -53,31 +106,43 @@ section{padding:100px 10%}
 .stat h3{font-size:40px;color:#00aaff}
 
 /* TRUST */
-.trust{margin-top:40px;background:linear-gradient(135deg,rgba(0,170,255,0.1),rgba(255,255,255,0.05));padding:40px;border-radius:20px;}
+.trust{
+margin-top:40px;
+background:linear-gradient(135deg,rgba(0,170,255,0.1),rgba(255,255,255,0.05));
+padding:40px;border-radius:20px;line-height:1.6;
+}
 
 /* OWNER */
-.owner-big{text-align:center;padding:50px;border:1px solid rgba(0,170,255,0.4);border-radius:20px;margin-top:40px;}
+.owner-big{
+margin-top:40px;text-align:center;padding:50px;
+border:1px solid rgba(0,170,255,0.4);border-radius:20px;
+}
 .owner-big h1{font-size:50px;color:#00aaff}
 
 /* CTA */
 .cta-section{padding:80px 10%;background:linear-gradient(135deg,#0d3a4a,#1a1a1a);}
 .cta-container{display:flex;gap:50px;flex-wrap:wrap;align-items:center;}
 .cta-image img{width:350px;height:350px;border-radius:20px;object-fit:cover;}
-.cta-btn{background:#25D366;padding:14px 30px;color:white;text-decoration:none;border-radius:10px;display:inline-block;margin-top:20px;}
-
-/* FAQ */
-.faq{margin-top:40px}
-.faq-item{margin-bottom:20px;background:#111;padding:20px;border-radius:10px}
+.cta-btn{
+background:#25D366;padding:14px 30px;color:white;
+text-decoration:none;border-radius:10px;display:inline-block;margin-top:20px;
+}
 
 /* PROCESS */
 .process{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px}
 .step{background:#111;padding:20px;border-radius:10px;flex:1}
 
+/* FAQ */
+.faq-item{margin-bottom:20px;background:#111;padding:20px;border-radius:10px}
+
 /* TESTIMONIAL */
 .testimonial{background:#111;padding:20px;border-radius:10px;margin-top:20px}
 
 /* WHATSAPP */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:15px 20px;border-radius:50px;color:white;text-decoration:none;}
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;padding:15px 20px;border-radius:50px;color:white;text-decoration:none;
+}
 
 footer{text-align:center;padding:20px;background:black}
 </style>
@@ -103,27 +168,37 @@ footer{text-align:center;padding:20px;background:black}
 
 <a href="#contact" class="btn">Get Quote</a>
 
-<a href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20industrial%20tools" class="btn" style="background:#25D366;margin-left:10px;" target="_blank">WhatsApp Now</a>
+<a href="https://wa.me/919158802623?text=Hello%20I%20am%20interested%20in%20industrial%20tools" 
+class="btn" target="_blank" style="background:#25D366;margin-left:10px;">
+WhatsApp Now
+</a>
 </div>
 </section>
 
 <!-- SLIDER -->
 <section>
-<h2 class="fade">Our Products</h2>
-<div class="slider"><div class="track">
-<img class="slide" src="image1.jpg">
-<img class="slide" src="image2.jpg">
-<img class="slide" src="image3.jpg">
-<img class="slide" src="collet.jpg">
-<img class="slide" src="carbideinserts.jpg">
-<img class="slide" src="image3.jpg">
-</div></div>
+<h2 class="fade">Our Product Range</h2>
+<div class="slider">
+<div class="track">
+<div class="slide"><img src="image1.jpg"></div>
+<div class="slide"><img src="image2.jpg"></div>
+<div class="slide"><img src="image3.jpg"></div>
+<div class="slide"><img src="image1.jpg"></div>
+<div class="slide"><img src="image2.jpg"></div>
+<div class="slide"><img src="image3.jpg"></div>
+</div>
+</div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT (LONG VERSION) -->
 <section id="about">
 <h2 class="fade">About Company</h2>
-<p class="fade">Veda Tools & Engineers is a leading supplier of industrial tools based in Bhosari, Pune...</p>
+
+<p class="fade">
+Veda Tools & Engineers is a leading supplier of industrial tools based in Bhosari, Pune. Since 2009, we have been serving factories, vendors, companies, and wholesalers with high-quality tools and precision components. Our wide product range includes MS tools, endmills, drills, collets, screws, carbide inserts, cutter bodies, edge finders, and allen keys.
+
+We focus on delivering consistent quality, competitive pricing, and long-term business relationships. Over the years, we have built strong trust with more than 400 clients by understanding their requirements and providing reliable solutions. Our goal is to support industries with tools that improve performance, productivity, and efficiency.
+</p>
 
 <div class="stats fade">
 <div class="stat"><h3>400+</h3><p>Clients</p></div>
@@ -131,11 +206,13 @@ footer{text-align:center;padding:20px;background:black}
 <div class="stat"><h3>17+</h3><p>Years</p></div>
 </div>
 
-<div class="trust fade">Reliable tools. Long-term partnerships.</div>
+<div class="trust fade">
+We believe in long-term partnerships, fast delivery, and consistent product quality. Our commitment is to support your production with reliable tools you can trust.
+</div>
 
 <div class="owner-big fade">
 <h1>Deepak Sonje</h1>
-<p>Founder</p>
+<p>Founder & Owner</p>
 </div>
 </section>
 
@@ -147,17 +224,24 @@ footer{text-align:center;padding:20px;background:black}
 <div class="card">CNC Machining</div>
 <div class="card">Fabrication</div>
 <div class="card">Tool Rooms</div>
+<div class="card">Heavy Engineering</div>
+<div class="card">Sugar Industries</div>
+<div class="card">Vendors</div>
 </div>
 </section>
 
-<!-- WHY -->
+<!-- WHY CHOOSE US (EXPANDED) -->
 <section>
 <h2 class="fade">Why Choose Us</h2>
 <div class="products">
 <div class="card">High Precision Tools</div>
 <div class="card">Fast Delivery</div>
-<div class="card">Bulk Supply</div>
+<div class="card">Bulk Supply Capability</div>
 <div class="card">Trusted Since 2009</div>
+<div class="card">Competitive Pricing</div>
+<div class="card">400+ Happy Clients</div>
+<div class="card">Wide Product Range</div>
+<div class="card">Reliable Quality</div>
 </div>
 </section>
 
@@ -165,10 +249,10 @@ footer{text-align:center;padding:20px;background:black}
 <section>
 <h2 class="fade">Our Process</h2>
 <div class="process">
-<div class="step">1. Requirement</div>
-<div class="step">2. Selection</div>
+<div class="step">1. Requirement Discussion</div>
+<div class="step">2. Product Selection</div>
 <div class="step">3. Quality Check</div>
-<div class="step">4. Delivery</div>
+<div class="step">4. Fast Delivery</div>
 </div>
 </section>
 
@@ -181,6 +265,7 @@ footer{text-align:center;padding:20px;background:black}
 <div class="card">Collets</div>
 <div class="card">Inserts</div>
 <div class="card">Allen Keys</div>
+<div class="card">Cutter Body</div>
 </div>
 </section>
 
@@ -188,16 +273,15 @@ footer{text-align:center;padding:20px;background:black}
 <section>
 <h2 class="fade">Testimonials</h2>
 <div class="testimonial">“Reliable supplier for our factory.”</div>
-<div class="testimonial">“Best quality tools in Pune.”</div>
+<div class="testimonial">“Best quality tools and fast delivery.”</div>
 </section>
 
 <!-- FAQ -->
 <section>
 <h2 class="fade">FAQ</h2>
-<div class="faq">
-<div class="faq-item">Do you supply in bulk? Yes.</div>
-<div class="faq-item">Do you deliver? Yes.</div>
-</div>
+<div class="faq-item">Do you supply in bulk? Yes, we handle bulk orders.</div>
+<div class="faq-item">Do you deliver across India? Yes.</div>
+<div class="faq-item">What tools do you specialize in? Endmills, drills, inserts, and more.</div>
 </section>
 
 <!-- CTA -->
@@ -205,8 +289,10 @@ footer{text-align:center;padding:20px;background:black}
 <div class="cta-container">
 <div class="cta-image"><img src="image1.jpg"></div>
 <div>
-<h2>Discuss your requirements</h2>
-<a href="https://wa.me/919158802623?text=Hello%20I%20want%20to%20discuss%20requirements" class="cta-btn" target="_blank">Chat on WhatsApp</a>
+<h2>Discuss your industrial requirements</h2>
+<a href="https://wa.me/919158802623?text=Hello%20I%20want%20to%20discuss%20requirements" class="cta-btn" target="_blank">
+Chat on WhatsApp
+</a>
 </div>
 </div>
 </section>
@@ -216,11 +302,14 @@ footer{text-align:center;padding:20px;background:black}
 <h2>Contact</h2>
 <p>📞 9158802623</p>
 <p>📧 vedatools@rediffmail.com</p>
+<p>📍 Bhosari, Pune</p>
 </section>
 
 <footer>© 2026 Veda Tools & Engineers</footer>
 
-<a class="whatsapp" href="https://wa.me/919158802623?text=Hello%20I%20am%20interested" target="_blank">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919158802623?text=Hello%20I%20am%20interested" target="_blank">
+WhatsApp
+</a>
 
 <script>
 const items=document.querySelectorAll('.fade');
